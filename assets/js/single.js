@@ -6,8 +6,8 @@ getRepoName = function () {
     var queryString = document.location.search;
     var repoName = queryString.split("=")[1];
     if (repoName) {
-        getRepoIssues(repoName);
         repoNameEl.textContent = repoName;
+        getRepoIssues(repoName);
     } else {
         document.location.replace("./index.html");
     }
